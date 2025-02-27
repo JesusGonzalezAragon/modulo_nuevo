@@ -44,6 +44,9 @@ Como he dicho antes, con MBR no se puede usar la etiqueta ``resize`` y es más i
 
 >Lo formateamos como ``GPT``. El uso de ``part_start`` y ``part_end`` en un principio no es obligatorio, pero si quieres estar seguro, lo puedes poner. Con el comando ``parted /dev/sdd print`` comprobamos que se ha creado correctmante como ``GPT``.
 
+> [!CAUTION]
+Es obligatorio el uso de la etiqueta ``label`` porque si no cogerá la tabla por defecto ``(msdos)`` y no se crearía correctmante.
+
 ![fgpt](img/formateo_gpt.png)
 
 Ahora simplemente extendemos en VirtualBox el disco de 1Gb a 2Gb.
