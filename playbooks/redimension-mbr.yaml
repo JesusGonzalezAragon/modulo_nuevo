@@ -1,0 +1,22 @@
+---
+    - name: Redimensionamos
+      hosts: all
+    
+      tasks:
+    
+      - name: Eliminamos la partición
+        community.general.parted:
+          device: /dev/sdb
+          number: 1
+          state: absent
+    
+      - name: Creamos la partición otra vez
+        community.general.parted:
+          device: /dev/sdb
+          number: 1
+          state: present
+          part_end: "100%"
+    
+      - name: Redimensionar el sistema de archivos ext4
+        command:
+          resize2fs /dev/sdb1

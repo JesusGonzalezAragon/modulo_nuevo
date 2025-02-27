@@ -1,0 +1,13 @@
+---
+- name: Redimensionamos la partición GPT
+  hosts: all
+
+  tasks:
+
+  - name: Extendemos la partición
+    community.general.parted:
+      device: /dev/sde
+      number: 1
+      part_end: "100%"
+      resize: true
+      state: present

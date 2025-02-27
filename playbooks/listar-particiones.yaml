@@ -1,0 +1,15 @@
+---
+    - name: Listar discos y particiones
+      hosts: all
+    
+      tasks:
+      - name: Listar discos y particiones
+        community.general.parted: 
+          device: "/dev/sdb"
+          unit: MiB
+          state: info
+        register: particiones
+    
+      - name: Mostrar las particiones
+        debug:
+            var: particiones

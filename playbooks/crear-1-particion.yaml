@@ -1,0 +1,16 @@
+---
+    - name: Crear particiones
+      hosts: all
+      tasks:
+    
+        - name: Crear partición  de 1GB
+          community.general.parted:
+            device: /dev/sdb
+            number: 1
+            state: present
+            fs_type: ext4
+    
+        - name: Formatear la partición como ext4
+          ansible.builtin.filesystem:
+            fstype: ext4
+            dev: /dev/sdb1

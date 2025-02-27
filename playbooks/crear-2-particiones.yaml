@@ -1,0 +1,32 @@
+---
+    - name: Crear 2 particiones
+      hosts: all
+    
+      tasks:
+      - name: Creamos una partición de 500 MB
+        community.general.parted:
+          device: /dev/sdc
+          number: 1
+          state: present
+          part_start: 0%
+          part_end: 50%
+          fs_type: ext4
+    
+      - name: Creamos otra partición de 500 MB
+        community.general.parted:
+          device: /dev/sdc
+          number: 2
+          state: present
+          part_start: 50%
+          part_end: 100%
+          fs_type: ext4
+    
+      - name: Formatear la partición como ext4
+        ansible.builtin.filesystem:
+              fstype: ext4
+              dev: /dev/sdc1
+    
+      - name: Formatear la otra partición como ext4
+        ansible.builtin.filesystem:
+              fstype: ext4
+              dev: /dev/sdc2
