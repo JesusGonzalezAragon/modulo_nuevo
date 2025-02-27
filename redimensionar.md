@@ -50,7 +50,7 @@ Ahora simplemente extendemos en VirtualBox el disco de 1Gb a 2Gb.
 
 ![sdd2](img/sdd2.png)
 
-> Se ppuede observar que el disco tiene un tamaño de 2048 MiB pero la partición solo tiene 1024, usamos la siguiente tarea para expandirlo:
+> Se puede observar que el disco tiene un tamaño de 2048 MiB pero la partición solo tiene 1024, usamos la siguiente tarea para expandirlo:
 
 ```javascript
 ---
