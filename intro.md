@@ -4,7 +4,7 @@
 
 Este módulo permite configurar la partición de dispositivos de almacenamiento utilizando la herramienta de línea de comandos parted.
 
-[!WARNING]
+> [!WARNING]
 > Solo sirve para crear la partición, no para formatearla, para eso hacemos uso de otro módulo llamado ``ansible.builtin.filesystem``
 
 ## Requisitos
