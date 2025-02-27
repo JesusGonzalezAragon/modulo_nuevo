@@ -11,7 +11,7 @@
 
 3. [Formateo de 1 disco](formateo.md)
 
-4. [Formateo de 2 discos](formateo2.md)
+4. [Formateo de 1 disco en 2 particiones](formateo2.md)
 
 5. [Redimensionamiento](redimensionar.md)
 
