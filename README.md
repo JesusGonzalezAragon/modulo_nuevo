@@ -14,3 +14,7 @@
 4. [Formateo de 2 discos](formateo2.md)
 
 5. [Redimensionamiento](redimensionar.md)
+
+## Referencias
+* [Parted en documentación de Ansible](https://docs.ansible.com/ansible/latest/collections/community/general/parted_module.html)
+* [ChatGPT](https://chatgpt.com/)
